@@ -1,0 +1,32 @@
+package com.bytedance.materialdesign
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+
+class FruitAdapter(val context: Context, val fruitList: List<Fruit>): RecyclerView.Adapter<FruitAdapter.ViewHolder>() {
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val fruitImage = itemView.findViewById<ImageView>(R.id.fruitImage)
+        val fruitName = itemView.findViewById<TextView>(R.id.fruitName)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(context).inflate(R.layout.fruit_item, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+         val fruit = fruitList[position]
+        holder.fruitName.text = fruit.name
+        Glide.with(context).load(fruit.imageId).into(holder.fruitImage)
+
+    }
+
+    override fun getItemCount(): Int = fruitList.size
+}

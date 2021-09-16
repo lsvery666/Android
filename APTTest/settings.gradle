@@ -1,0 +1,4 @@
+include ':factory-compiler'
+include ':annotation'
+include ':app'
+rootProject.name = "APTTest"

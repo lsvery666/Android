@@ -1,0 +1,20 @@
+//utils.gradle 中定义了一个获取 AndroidManifests.xml versionName 的函数
+def getVersionNameAdvanced() {
+    // 下面这行代码中的 project 是谁?
+    def xmlFile = project.file("./src/main/AndroidManifest.xml")
+    def rootManifest = new XmlSlurper().parse(xmlFile)
+    return rootManifest['@android:versionName']
+}
+// 现在，想把这个 API 输出到各个 Project。由于这个 utils.gradle 会被每一个 Project Apply，所以
+// 我可以把 getVersionNameAdvanced 定义成一个 closure，然后赋值到一个外部属性
+// 下面的 ext 是谁的 ext?
+ext { //此段花括号中代码是闭包
+//除了 ext.xxx=value 这种定义方法外，还可以使用 ext{}这种书写方法。
+// ext{}不是 ext(Closure)对应的函数调用。但是 ext{}中的{}确实是闭包。
+    getVersionNameAdvanced = this.&getVersionNameAdvanced
+}
+
+/*
+问题 1:project 就是加载 utils.gradle 的 project。 utils.gradle 会加载到 子 project 中。所以，getVersionNameAdvanced 才不用区分到底是哪个 project。 反正一个 project 有一个 utils.gradle 对应的 Script。
+问题 2:ext:自然就是 Project 对应的 ext 了。此处为 Project 添加了一些 closure。那么，在 Project 中就可以调用 getVersionNameAdvanced 函数了
+ */

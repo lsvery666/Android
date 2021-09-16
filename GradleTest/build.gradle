@@ -1,0 +1,35 @@
+// 每一个build.gradle文件会生成一个Project对象，根目录下的Project叫做rootProject
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+println "In build.gradle, gradle id is " + gradle.hashCode()
+println "Home Dir:" + gradle.gradleHomeDir
+println "User Home Dir:" + gradle.gradleUserHomeDir
+println "Parent: " + gradle.parent
+
+// buildscript是一个Script Block（SB）
+buildscript {
+    ext.kotlin_version = "1.4.32"
+    repositories {  // repositories也是一个SB
+        google()
+        //jcenter 是一个函数，表示编译过程中依赖的库，所需的插件可以在 jcenter 仓库中下载
+        jcenter()
+    }
+    //dependencies 表示我们编译的时候，依赖 android 开发的 gradle 插件。
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/showDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="common dialog"/>
+
+    <Button
+        android:id="@+id/noTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Title Bar Dialog"/>
+
+    <Button
+        android:id="@+id/fullScreenDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="full screen dialog"/>
+
+    <Button
+        android:id="@+id/showActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="noContent Activity"/>
+
+    <Button
+        android:id="@+id/translucentActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="translucent Activity"/>
+
+    <Button
+        android:id="@+id/thisActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="this Activity"/>
+</LinearLayout>

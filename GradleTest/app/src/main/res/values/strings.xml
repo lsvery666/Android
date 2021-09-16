@@ -1,0 +1,4 @@
+<resources>
+<!--    这个app_name会和productFlavors中的app_name冲突-->
+<!--    <string name="app_name">GradleTest</string>-->
+</resources>

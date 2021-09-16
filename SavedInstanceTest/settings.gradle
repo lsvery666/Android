@@ -1,0 +1,2 @@
+rootProject.name = "SavedInstanceTest"
+include ':app'

@@ -1,0 +1,26 @@
+// setting.gradle会生成一个Setting对象
+// 用来进行初始化
+include ':app'  // 包含的子Project
+rootProject.name = "GradleTest"
+
+// 我在 settings.gradle 中想为 Gradle 对象设置一些外置属性，所以在 initEnvironment 函数中
+def initEnvironment(){
+    //属性值从 local.properites 中读取
+    Properties properties = new Properties()
+    File propertyFile = new File(rootDir.getAbsolutePath() + "/local.properties")
+    properties.load(propertyFile.newDataInputStream())
+    //gradle 就是 gradle 对象。它默认是 Settings 和 Project 的成员变量。可直接获取
+    //ext 前缀，表明操作的是外置属性。api 是一个新的属性名。前面说过，只在
+    // 第一次定义或者设置它的时候需要 ext 前缀
+    gradle.ext.api = properties.getProperty('sdk.api')
+    println gradle.api //再次存取 api 的时候，就不需要 ext 前缀了
+}
+initEnvironment()
+
+// 当我们执行 gradle xxx 或者什么的时候，gradle 会从默认的配置 脚本中构造出一个 Gradle 对象。
+// 在整个执行过程中，只有这么一个对象。Gradle 对象的数据类型就是 Gradle。
+// 我们一般很少去定制这个默认的配置脚本
+println "In settings.gradle, gradle id is " + gradle.hashCode()
+println "Home Dir:" + gradle.gradleHomeDir
+println "User Home Dir:" + gradle.gradleUserHomeDir
+println "Parent: " + gradle.parent

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AttachButton">
+        <!--是否需要自动吸边-->
+        <attr name="customIsAttach" format="boolean" />
+        <!--是否可拖曳-->
+        <attr name="customIsDrag" format="boolean" />
+    </declare-styleable>
+    <!--圆弧进度条-->
+    <declare-styleable name="TasksCircularCountDownView">
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="ringColor" format="color"/>
+        <attr name="ringBgColor" format="color"/>
+        <attr name="progress" format="float"/>
+        <attr name="bgColor" format="color"/>
+        <attr name="ringPadding" format="dimension"/>
+    </declare-styleable>
+
+    <!--滚动数字-->
+    <declare-styleable name="MultiScrollNumber">
+        <attr name="number_size" format="integer"/>
+        <attr name="number_color" format="color"/>
+    </declare-styleable>
+</resources>

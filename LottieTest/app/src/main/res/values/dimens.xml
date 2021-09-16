@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="polaris_title_bar_height">44dp</dimen>
+    <dimen name="polaris_shadow_height">0.5dp</dimen>
+    <dimen name="polaris_large_pad_min_height">700dp</dimen>
+    <dimen name="polaris_large_pad_min_width">540dp</dimen>
+
+    <dimen name="count_down_bg_view_small_size">40dp</dimen>
+    <dimen name="count_down_circular_view_small_size">37dp</dimen>
+    <dimen name="count_down_image_view_small_size">24dp</dimen>
+
+    <dimen name="count_down_bg_view_size">44dp</dimen>
+    <dimen name="count_down_circular_view_size">41dp</dimen>
+    <dimen name="count_down_image_view_size">28dp</dimen>
+    <dimen name="tip_offset">20dp</dimen>
+    <dimen name="count_down_text_height">15dp</dimen>
+
+    <dimen name="count_down_text_view_height">44dp</dimen>
+
+    <dimen name="count_down_image_view_golden_egg_width">21dp</dimen>
+    <dimen name="count_down_image_view_golden_egg_height">25dp</dimen>
+
+    <dimen name="count_down_bg_view_big_size">48dp</dimen>
+    <dimen name="count_down_circular_view_big_size">45dp</dimen>
+    <dimen name="count_down_image_view_big_size">32dp</dimen>
+</resources>

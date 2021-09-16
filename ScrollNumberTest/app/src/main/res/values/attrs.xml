@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--滚动数字-->
+    <declare-styleable name="MultiScrollNumber">
+        <attr name="number_size" format="integer"/>
+        <attr name="number_color" format="color"/>
+    </declare-styleable>
+</resources>

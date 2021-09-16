@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ConstraintLayoutTest2</string>
+    <string name="user_center">个人中心</string>
+    <string name="sign_in">已签到</string>
+    <string name="day">游戏中心每日签到</string>
+    <string name="user_name">手机用户123456789</string>
+    <string name="score">积分：55</string>
+    <string name="common_func">常用功能</string>
+    <string name="gift_bags">我的礼包</string>
+    <string name="games">我的游戏</string>
+    <string name="collections">我的收藏</string>
+    <string name="comments">我的评论</string>
+    <string name="suggestions">意见反馈</string>
+</resources>

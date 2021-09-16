@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/background_black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/black" />
+
+    <FrameLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/dialog_coin_income"
+            layout="@layout/dialog_coin_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+        <View
+            android:id="@+id/white_cover"
+            android:layout_width="223dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@color/white" />
+
+
+        <TextView
+            android:id="@+id/congratulation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:text="@string/congratulation_income"
+            android:gravity="center_horizontal|top"
+            android:textColor="#222222"
+            android:textSize="20sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/income_layout"
+            android:layout_gravity="center"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp">
+            <LinearLayout
+                android:id="@+id/income_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <com.bytedance.lottietest.goldbox.view.MultiScrollNumber
+                    android:id="@+id/income_amount"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:number_color="@color/F04142"
+                    app:number_size="20" />
+
+                <TextView
+                    android:id="@+id/income_postfix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:gravity="top"
+                    android:text="@string/dialog_crash_postfix"
+                    android:textColor="@color/F04142"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/withDrawTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/income_text"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/coin_income_can_withdraw"
+                />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/shining_lottie_view"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="101dp"
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/dropping_lottie_view"
+        android:layout_width="220dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="84dp"
+        />
+
+</FrameLayout>

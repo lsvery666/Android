@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <TextView-->
+<!--        android:id="@+id/testText"-->
+<!--        android:text="动态的textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    有id则会复用，没有id不会复用-->
+    <EditText
+        android:id="@+id/dm_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="动态的editText" />
+
+</LinearLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/btn_left"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icon_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_center"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/user_center"
+        android:textAppearance="@style/user_center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_left"
+        app:srcCompat="@drawable/bg_day" />
+
+    <ImageButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="60dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="271.23dp"
+        android:background="@drawable/icon_sign_in"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+
+    <ImageView
+        android:id="@+id/day"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img"
+        app:srcCompat="@drawable/icon_day" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="171dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="40dp"
+        android:gravity="top"
+        android:text="@string/day"
+        android:textAppearance="@style/day"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+
+    <ImageButton
+        android:id="@+id/head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40.5dp"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toBottomOf="@+id/btn_left"
+        app:srcCompat="@drawable/icon_head" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="195dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/user_name"
+        android:textAppearance="@style/user_name"
+        app:layout_constraintStart_toEndOf="@+id/head"
+        app:layout_constraintTop_toBottomOf="@+id/btn_left" />
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sign_in"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
+        app:layout_constraintStart_toStartOf="@+id/btn_sign_in"
+        app:layout_constraintTop_toTopOf="@+id/btn_sign_in" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="171dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/score"
+        app:layout_constraintStart_toEndOf="@+id/head"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+    <ImageView
+        android:id="@+id/img_common_func"
+        android:layout_width="343dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img"
+        app:srcCompat="@drawable/bg_common_funcs" />
+
+    <TextView
+        android:id="@+id/tv_common_func"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/common_func"
+        android:textAppearance="@style/common_func"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func" />
+
+    <ImageButton
+        android:id="@+id/btn_git_bags"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="87dp"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func"
+        app:srcCompat="@drawable/icon_gift_bags" />
+
+    <ImageButton
+        android:id="@+id/btn_games"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="157.5dp"
+        android:layout_marginTop="87dp"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func"
+        app:srcCompat="@drawable/icon_games" />
+
+    <ImageButton
+        android:id="@+id/btn_collections"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="87dp"
+        android:background="#00000000"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func"
+        app:srcCompat="@drawable/icon_collections" />
+
+    <ImageButton
+        android:id="@+id/btn_comments"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/img_common_func"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:srcCompat="@drawable/icon_comments" />
+
+    <ImageButton
+        android:id="@+id/btn_suggestions"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="157.5dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toBottomOf="@+id/img_common_func"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:srcCompat="@drawable/icon_suggestions" />
+
+    <TextView
+        android:id="@+id/tv_gift_bags"
+        android:layout_width="64dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="123dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/gift_bags"
+        android:textAppearance="@style/func_style"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func" />
+
+    <TextView
+        android:id="@+id/tv_games"
+        android:layout_width="64dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="139.5dp"
+        android:layout_marginTop="123dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/games"
+        android:textAppearance="@style/func_style"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func" />
+
+    <TextView
+        android:id="@+id/tv_collections"
+        android:layout_width="64dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="255dp"
+        android:layout_marginTop="123dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/collections"
+        android:textAppearance="@style/func_style"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func"
+        app:layout_constraintTop_toTopOf="@+id/img_common_func" />
+
+    <TextView
+        android:id="@+id/tv_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/comments"
+        android:textAppearance="@style/func_style"
+        app:layout_constraintBottom_toBottomOf="@+id/img_common_func"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func" />
+
+    <TextView
+        android:id="@+id/tv_suggestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139.5dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/suggestions"
+        android:textAppearance="@style/func_style"
+        app:layout_constraintBottom_toBottomOf="@+id/img_common_func"
+        app:layout_constraintStart_toStartOf="@+id/img_common_func" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

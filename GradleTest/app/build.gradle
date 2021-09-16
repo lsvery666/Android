@@ -1,0 +1,91 @@
+//plugins {
+//    id 'com.android.application'
+//    id 'kotlin-android'
+//}
+
+// apply是一个函数，函数调用的小括号可以省略，用于加载插件、gradle文件
+// 可以接收一个map，key值只能是字符串，所以可以省略双引号
+// 如果是编译APP，则加载此插件
+apply plugin: "com.android.application"
+// 如果是编译Library，则加载此插件
+//apply plugin: "com.android.library"
+
+apply plugin: "kotlin-android"
+
+apply from: rootProject.getRootDir().getAbsolutePath() + "/Utils.gradle"
+
+tasks.getByName("assemble") {
+    it.doLast {
+        println "$project.name: After assemble, jar libs are copied to local repository"
+        project.getVersionNameAdvanced()
+    }
+}
+
+println gradle.api
+
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.bytedance.gradletest"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            // 后缀
+            applicationIdSuffix ".release"
+            // 是否混淆代码
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            applicationIdSuffix ".debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        cn {
+            applicationId "com.ss.android.article.news"
+            buildConfigField "int", "AID", "13"
+            buildConfigField "boolean", "ISI18N", "false"
+            resValue("string", "app_name", "cn_push_demo")
+        }
+        i18n {
+            applicationId "com.ss.android.ugc.trill"
+            buildConfigField "int", "AID", "1180"
+            buildConfigField "boolean", "ISI18N", "true"
+            resValue("string", "app_name", "i18n_push_demo")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

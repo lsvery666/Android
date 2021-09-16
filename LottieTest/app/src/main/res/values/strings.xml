@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">LottieTest</string>
+    <string name="polaris_dialog_title">再看%1$d秒，可领取%2$d金币～</string>
+    <string name="polaris_dialog_close">关闭视频</string>
+    <string name="polaris_dialog_continue">继续观看</string>
+    <string name="polaris_redpacket_message2">恭喜\n你收到一个现金红包</string>
+    <string name="polaris_redpacket_message_draw">红包可直接提现</string>
+
+    <string name="login_check_text">账号异常</string>
+    <string name="login_check_btn_text">更换账号</string>
+    <string name="congratulate_find_all_red_packets">恭喜找到全部福利红包</string>
+    <string name="my_balance">我的余额</string>
+    <string name="open_red_pocket">领红包</string>
+    <string name="draw_to_alipay">可提现至支付宝</string>
+    <string name="go_task_tab">去看看</string>
+    <string name="yuan">元</string>
+    <string name="scroll_down_find_red_packets">向下阅读寻找红包</string>
+
+    <string name="can_get_coin">点击马上领钱</string>
+    <string name="congratulation_income">恭喜你获得</string>
+    <string name="next_treasure">下一份奖励将在%s后可领取</string>
+    <string name="coin_income_okbtn">去看看</string>
+    <string name="popup_text">稍后领%s%s</string>
+    <string name="income_amount">0.2</string>
+
+    <string name="dialog_crash_postfix">&#160;元现金</string>
+    <string name="dialog_coin_postfix">&#160;金币</string>
+    <string name="popup_crash_postfix">元</string>
+    <string name="popup_coin_postfix">金币</string>
+</resources>
